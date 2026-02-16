@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import { Particle } from "../ui/Particles";
 
 export default function Hero() {
     return (
@@ -15,6 +16,14 @@ export default function Hero() {
                 [-webkit-mask-size:100%_100%]"
                 aria-hidden
             />
+
+            {Array.from({ length: 20 }).map((_, index) => (
+                <Particle key={index} offsetX={index * 20} side="left" delay={index * 0.1} duration={8 + Math.random() * 6} />
+            ))}
+
+            {Array.from({ length: 20 }).map((_, index) => (
+                <Particle key={index} offsetX={index * 20} side="right" delay={index * 0.1} duration={8 + Math.random() * 6} />
+            ))}
 
             <motion.div
             animate={{
