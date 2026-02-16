@@ -75,6 +75,10 @@ export default function Hero() {
                     </div>
                 </div>
             </motion.div>
+
+            <div className="absolute -bottom-10 left-0 w-full h-50 bg-gradient-to-b from-transparent to-black">
+
+            </div>
         </section>
     )
 }
