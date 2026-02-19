@@ -6,14 +6,14 @@ export default function Hero() {
     return (
         <section className="relative min-h-screen items-center justify-center overflow-hidden">
             {/* Purple gradient — full section */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0F0F20] to-[#170A25]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0F0F20] to-[#170A25] pointer-events-none" aria-hidden />
 
             {/* Grid only inside centered circle (transparent elsewhere) */}
             <div
                 className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]
                 [mask-image:radial-gradient(circle_50vmin_at_50%_50%,black,transparent)] 
                 [-webkit-mask-image:radial-gradient(circle_50vmin_at_50%_50%,black,transparent)] [mask-size:100%_100%] 
-                [-webkit-mask-size:100%_100%]"
+                [-webkit-mask-size:100%_100%] pointer-events-none"
                 aria-hidden
             />
 
@@ -35,7 +35,8 @@ export default function Hero() {
             }}
             className="absolute left-0 top-0 h-full w-[300px]
             bg-gradient-to-r from-purple-600/20 to-transparent
-            blur-2xl"
+            blur-2xl pointer-events-none"
+            aria-hidden
             />
 
             <motion.div
@@ -48,7 +49,8 @@ export default function Hero() {
             }}
             className="absolute right-0 top-0 h-full w-[300px]
             bg-gradient-to-r from-purple-600/20 to-transparent
-            blur-2xl"
+            blur-2xl pointer-events-none"
+            aria-hidden
             />
 
             <motion.div
@@ -76,9 +78,8 @@ export default function Hero() {
                 </div>
             </motion.div>
 
-            <div className="absolute -bottom-10 left-0 w-full h-50 bg-gradient-to-b from-transparent to-black">
+            <div className="absolute -bottom-10 left-0 w-full h-50 bg-gradient-to-b from-transparent to-black pointer-events-none" aria-hidden />
 
-            </div>
         </section>
     )
 }
