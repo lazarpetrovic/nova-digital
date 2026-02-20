@@ -14,7 +14,7 @@ export function Particle({ offsetX, side, delay, duration }: ParticleProps) {
   return (
     <motion.div
       initial={{ y: 200, opacity: 0 }}
-      animate={{ y: -800, opacity: [0, 1, 1, 0] }}
+      animate={{ y: -600, opacity: [0, 1, 1, 0] }}
       transition={{
         duration,
         repeat: Infinity,
