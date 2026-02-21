@@ -6,6 +6,7 @@ import AboutUs from "./components/AboutUs";
 import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import ContactUs from "./components/ContactUs";
+import Footer from "./layout/Footer";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     <Testimonials />
     <Pricing />
     <ContactUs />
+    <Footer />
     </>
   )
 }

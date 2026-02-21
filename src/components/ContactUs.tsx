@@ -47,7 +47,7 @@ const formFields = [
 
 export default function ContactUs() {
     return (
-        <section id="contact" className="py-20 relative bg-black">
+        <section id="contact" className="py-20 relative bg-black overflow-hidden">
             <div className="container mx-auto max-w-7xl px-6 md:px-12">
                 <div className="space-y-8 text-center mb-16">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight text-center">
@@ -57,7 +57,7 @@ export default function ContactUs() {
                         Have a project in mind? Get in touch and let's create something amazing
                     </p>
                     </div>
-                    <div className="flex flex-row gap-6 justify-center">
+                    <div className="flex flex-col lg:flex-row gap-6 justify-center">
                         <div className="flex-1 bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-8">
                             <h3 className="text-2xl font-bold text-white mb-6">Contact Us</h3>
                             <div className="space-y-6 text-left">
