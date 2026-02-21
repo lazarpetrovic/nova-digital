@@ -5,6 +5,7 @@ import Portfolio from "./components/Portfolio";
 import AboutUs from "./components/AboutUs";
 import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
+import ContactUs from "./components/ContactUs";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
     <AboutUs />
     <Testimonials />
     <Pricing />
+    <ContactUs />
     </>
   )
 }
