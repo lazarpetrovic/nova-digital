@@ -12,9 +12,9 @@ const stats = [
 
 export default function AboutUs() {
     return (
-        <section id="about" className="py-20 relative bg-black">
+        <section id="about" className="py-20 relative bg-black overflow-hidden">
             <div className="container mx-auto max-w-7xl px-6 md:px-12">
-                <div className="flex flex-row align-center items-center gap-10">
+                <div className="flex flex-col md:flex-row align-center items-center gap-10">
                     <div className="relative flex-1">
                         <div className="absolute inset-0 bg-gradient-to-br from-[#4f46e5] to-purple-600/20 rounded-3xl blur-3xl opacity-70"></div>
                         <div className="relative z-10 overflow-hidden border border-white/20 shadow-2xl rounded-3xl">
@@ -37,19 +37,19 @@ export default function AboutUs() {
                                 Since 2020, we've helped bussinesses of all sizes transform their digital presence with cutting-edge solutions that combine creativity, technology, and data-driven insights.
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-2 gap-6">
                             {stats.map((stat, index) => (
-                                <div key={index} className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#4F46E5]/30 transition-all duration-500 hover:translate-y-[-4px] hover:shadow-[0_20px_60px_rgba(79,70,229,0.15)] p-6 rounded-2xl">
+                                <div key={index} className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-[#4F46E5]/30 transition-all duration-500 hover:translate-y-[-4px] hover:shadow-[0_20px_60px_rgba(79,70,229,0.15)] p-3 md:p-4 lg:p-6 rounded-2xl">
                                     <div className="flex flex-row items-center gap-4">
                                         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#4f46e5]/20 to-purple-600/20 border border-[#4f46e5]/20 flex items-center justify-center">
                                             <stat.icon className="w-5 h-5 text-[#4f46e5]" />
                                         </div>
                                         <div>
                                             <div>
-                                                <span className="text-2xl font-bold text-white">{stat.value}</span>
+                                                <span className="text-xl md:text-2xl font-bold text-white">{stat.value}</span>
                                             </div>
                                             <div>
-                                                <span className="text-white/70 text-sm mt-1">{stat.label}</span>
+                                                <span className="text-white/70 text-xs md:text-sm mt-1">{stat.label}</span>
                                             </div>
                                         </div>
                                     </div>

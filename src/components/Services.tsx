@@ -26,7 +26,7 @@ const services = [
 
 export default function Services () {
     return (
-        <section id="services" className="py-20 relative bg-black">
+        <section id="services" className="py-20 relative bg-black overflow-hidden">
             <div className="container mx-auto max-w-7xl px-6 md:px-12">
                 <motion.div
                 initial={{opacity: 0, y: 30}}
@@ -38,7 +38,7 @@ export default function Services () {
                             Our <span className="bg-gradient-to-r from-[#4f46e5] to-purple-500 bg-clip-text text-transparent">
                                 Services
                         </span></h2>
-                        <p className="text-lg text-white/70 max-w-2xl mx-auto text-center">We offer a wide range of services to help you grow your business.</p>
+                        <p className="text-base md:text-xl text-white/70 max-w-2xl mx-auto text-center">We offer a wide range of services to help you grow your business.</p>
                     </div>
                 </motion.div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
