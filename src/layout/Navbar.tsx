@@ -1,33 +1,14 @@
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
 import { Sparkles } from "lucide-react";
 
 const navLinks = [
-  {
-    name: "Services",
-    to: "/services",
-  },
-  {
-    name: "Portfolio",
-    to: "/portfolio",
-  },
-  {
-    name: "About",
-    to: "/about",
-  },
-  {
-    name: "Testimonials",
-    to: "/testimonials",
-  },
-  {
-    name: "Pricing",
-    to: "/pricing",
-  },
-  {
-    name: "Contact",
-    to: "/contact",
-  }
-]
+  { name: "Services", href: "#services" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "About", href: "#about" },
+  { name: "Testimonials", href: "#testimonials" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "Contact", href: "#contact" },
+];
 
 export default function Navbar() {
   return (
@@ -38,7 +19,7 @@ export default function Navbar() {
         animate={{opacity: 1, y: 0}}
         transition={{duration: 0.7}}
         className="flex items-center justify-between">
-            <Link to="/">
+            <a href="#hero" className="flex items-center gap-3">
                 <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#4f46e5] to-purple-600 flex items-center justify-center shadow-lg shadow-purple-600/20">
                         <Sparkles className="w-5 h-5 text-white"></Sparkles>
@@ -47,18 +28,22 @@ export default function Navbar() {
                         Nova Digital
                     </span>
                 </div>
-            </Link>
+            </a>
             
             <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-                <Link to={link.to} key={link.name} className="text-white/70 hover:text-white transition-colors relative group text-base">
+                <a
+                  href={link.href}
+                  key={link.name}
+                  className="text-white/70 hover:text-white transition-colors relative group text-base"
+                >
                 {link.name}
                 <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#4f46e5] to-purple-600 group-hover:w-full transition-all duration-300"></div>
-                </Link>
+                </a>
             ))}
             </div>
 
-            <Link to="/contact" className="hidden lg:block px-6 py-2.5 bg-gradient-to-r from-[#4f46e5] to-purple-600 text-white rounded-xl font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-600/30 hover:scale-103 transition-shadow transition-transform duration-300">Get Started</Link>
+            <a href="#contact" className="hidden lg:block px-6 py-2.5 bg-gradient-to-r from-[#4f46e5] to-purple-600 text-white rounded-xl font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-600/30 hover:scale-103 transition-shadow transition-transform duration-300">Get Started</a>
             
         </motion.div>
         </nav>
